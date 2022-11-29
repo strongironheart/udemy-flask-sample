@@ -1,5 +1,5 @@
 from flask import Blueprint,request
-from apps.app import db, app
+#from apps.app import db, app
 
 landing = Blueprint('landing', 
         __name__, 
