@@ -37,7 +37,7 @@ services:
     build: ./web
     networks:
       - app_net
-#      - keycloak_net
+      - keycloak_net
     environment:
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASS}
