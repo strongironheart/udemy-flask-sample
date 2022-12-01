@@ -166,7 +166,7 @@ services:
       # googleがデフォルト githubの時は以下みたいにする
       # OAUTH2_PROXY_PROVIDER: "github"
       # keycloakのFQDN(masterレルムは繋ぐことができない)
-      OAUTH2_PROXY_OIDC_ISSUER_URL: https://tactac.tk:8443/realms/hogepeke
+      OAUTH2_PROXY_OIDC_ISSUER_URL: https://auth.tactac.tk:8443/realms/hogepeke
       OAUTH2_PROXY_CLIENT_ID: $CLIENT_ID
       OAUTH2_PROXY_CLIENT_SECRET: $CLIENT_SECRET
       # SLOする際に必要。リダイレクト先(rdパラメター)にで有効なパス(今回はlandingページに戻す)
