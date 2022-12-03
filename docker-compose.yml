@@ -141,7 +141,7 @@ services:
     ports:
       - 4180:4180
     networks:
-      #keycloak_net: #追記
+      keycloak_net: #追記
       nginx_net:
         ipv4_address: 172.16.0.11
     environment:
