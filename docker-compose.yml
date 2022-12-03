@@ -141,7 +141,7 @@ services:
     ports:
       - 4180:4180
     networks:
-      keycloak_net: #追記
+      #keycloak_net: #追記
       nginx_net:
         ipv4_address: 172.16.0.11
     environment:
@@ -187,7 +187,7 @@ services:
       OAUTH2_PROXY_INSECURE_OIDC_ALLOW_UNVERIFIED_EMAIL: "true"
       #OAUTH2_PROXY_REVERSE_PROXY: "true"
     depends_on:
-      #- keycloak
+      - keycloak
       - certbot
 
   certbot:
