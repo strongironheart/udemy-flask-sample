@@ -23,6 +23,7 @@ services:
     container_name: nginx_proxy_koz
     networks:
       - nginx_net
+      - keycloak_net #追加
     depends_on:
       - nginx
     ports:
@@ -37,7 +38,7 @@ services:
     build: ./web
     networks:
       - app_net
-#      - keycloak_net
+      - keycloak_net #追加
     environment:
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASS}
@@ -186,7 +187,7 @@ services:
       OAUTH2_PROXY_INSECURE_OIDC_ALLOW_UNVERIFIED_EMAIL: "true"
       #OAUTH2_PROXY_REVERSE_PROXY: "true"
     depends_on:
-      - keycloak
+      #- keycloak
       - certbot
 
   certbot:
